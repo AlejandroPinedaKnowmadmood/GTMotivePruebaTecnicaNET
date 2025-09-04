@@ -2,20 +2,24 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 using GtMotive.Estimate.Microservice.Api;
+using GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create;
+using GtMotive.Estimate.Microservice.Domain.Interfaces;
 using GtMotive.Estimate.Microservice.Infrastructure;
+using GtMotive.Estimate.Microservice.Infrastructure.MongoDb.Settings;
+using GtMotive.Estimate.Microservice.Infrastructure.Repositories;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using Xunit;
 
 [assembly: CLSCompliant(false)]
 
 namespace GtMotive.Estimate.Microservice.FunctionalTests.Infrastructure
 {
-    internal sealed class CompositionRootTestFixture : IDisposable, IAsyncLifetime
+    public sealed class CompositionRootTestFixture : IDisposable, IAsyncLifetime
     {
-        private readonly ServiceProvider _serviceProvider;
-
         public CompositionRootTestFixture()
         {
             var configuration = new ConfigurationBuilder()
@@ -27,10 +31,26 @@ namespace GtMotive.Estimate.Microservice.FunctionalTests.Infrastructure
             Configuration = configuration;
             ConfigureServices(services);
             services.AddSingleton<IConfiguration>(configuration);
-            _serviceProvider = services.BuildServiceProvider();
+            services.AddSingleton<IMongoClient>(sp =>
+            {
+                var options = sp.GetRequiredService<IOptions<MongoDbSettings>>();
+                return new MongoClient(options.Value.ConnectionString);
+            });
+
+            services.Configure<MongoDbSettings>(opts =>
+            {
+                opts.ConnectionString = "mongodb://localhost:27017";
+                opts.MongoDbDatabaseName = "estimate-db";
+            });
+            services.AddTransient<ICreateVehicleUseCase, CreateVehicleUseCase>();
+            services.AddTransient<IVehicleRepository, VehicleRepository>();
+
+            ServiceProvider = services.BuildServiceProvider();
         }
 
         public IConfiguration Configuration { get; }
+
+        public ServiceProvider ServiceProvider { get; }
 
         public async Task InitializeAsync()
         {
@@ -47,7 +67,7 @@ namespace GtMotive.Estimate.Microservice.FunctionalTests.Infrastructure
         {
             ArgumentNullException.ThrowIfNull(handlerAction);
 
-            using var scope = _serviceProvider.CreateScope();
+            using var scope = ServiceProvider.CreateScope();
             var handler = scope.ServiceProvider.GetRequiredService<IRequestHandler<TRequest, Unit>>();
 
             await handlerAction.Invoke(handler);
@@ -58,7 +78,7 @@ namespace GtMotive.Estimate.Microservice.FunctionalTests.Infrastructure
         {
             ArgumentNullException.ThrowIfNull(handlerAction);
 
-            using var scope = _serviceProvider.CreateScope();
+            using var scope = ServiceProvider.CreateScope();
             var handler = scope.ServiceProvider.GetRequiredService<IRequestHandler<TRequest, TResponse>>();
 
             if (handler == null)
@@ -73,7 +93,7 @@ namespace GtMotive.Estimate.Microservice.FunctionalTests.Infrastructure
         {
             ArgumentNullException.ThrowIfNull(handlerAction);
 
-            using var scope = _serviceProvider.CreateScope();
+            using var scope = ServiceProvider.CreateScope();
             var handler = scope.ServiceProvider.GetRequiredService<TRepository>();
 
             if (handler == null)
@@ -86,7 +106,7 @@ namespace GtMotive.Estimate.Microservice.FunctionalTests.Infrastructure
 
         public void Dispose()
         {
-            _serviceProvider.Dispose();
+            ServiceProvider.Dispose();
         }
 
         private static void ConfigureServices(IServiceCollection services)
