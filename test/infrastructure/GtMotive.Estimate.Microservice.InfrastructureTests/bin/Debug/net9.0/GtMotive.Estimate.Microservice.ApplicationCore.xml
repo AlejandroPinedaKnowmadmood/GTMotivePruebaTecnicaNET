@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GtMotive.Estimate.Microservice.ApplicationCore</name>
+    </assembly>
+    <members>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.ApplicationConfiguration">
+            <summary>
+            Adds Use Cases classes.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.ApplicationConfiguration.AddUseCases(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds Use Cases to the ServiceCollection.
+            </summary>
+            <param name="services">Service Collection.</param>
+            <returns>The modified instance.</returns>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleInput">
+            <summary>
+            DTO for input when creating Vehicles.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleInput.VIN">
+            <summary>
+            Gets or sets the VIN of the Vehicle.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleInput.Plate">
+            <summary>
+            Gets or sets the Plate of the Vehicle.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleInput.Brand">
+            <summary>
+            Gets or sets the Brand of the Vehicle.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleInput.Model">
+            <summary>
+            Gets or sets the Model of the Vehicle.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleInput.ManufactureDate">
+            <summary>
+            Gets or sets the ManufactureDate of the Vehicle.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleOutput">
+            <summary>
+            DTO for output when creating Vehicles.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleOutput.VehicleId">
+            <summary>
+            Gets or sets VehicleId.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleOutput.VIN">
+            <summary>
+            Gets or sets the VIN of the Vehicle.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleUseCase">
+            <summary>
+            Use case to create a vehicle in the system.
+            </summary>
+            <remarks>
+            Initializes a new instance of the <see cref="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleUseCase"/> class.
+            </remarks>
+            <param name="vehicleRepository">alfa. </param>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleUseCase.#ctor(GtMotive.Estimate.Microservice.Domain.Interfaces.IVehicleRepository)">
+            <summary>
+            Use case to create a vehicle in the system.
+            </summary>
+            <remarks>
+            Initializes a new instance of the <see cref="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleUseCase"/> class.
+            </remarks>
+            <param name="vehicleRepository">alfa. </param>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleUseCase.Execute(GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.CreateVehicleInput)">
+            <summary>
+            Executes the use case to create a new vehicle.
+            </summary>
+            <param name="input">The input data required to create the vehicle.</param>
+            <returns>The result of the vehicle creation.</returns>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Create.ICreateVehicleUseCase">
+            <summary>
+            Interface for handle create vehicle user case.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.IOutputPortNotFound">
+            <summary>
+            Interface to define the Not Found Output Port.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.IOutputPortNotFound.NotFoundHandle(System.String)">
+            <summary>
+            Informs the resource was not found.
+            </summary>
+            <param name="message">Text description.</param>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.IOutputPortStandard`1">
+            <summary>
+            Interface to define the Standard Output Port.
+            </summary>
+            <typeparam name="TUseCaseOutput">Tyoe of the use case response dto.</typeparam>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.IOutputPortStandard`1.StandardHandle(`0)">
+            <summary>
+            Writes to the Standard Output.
+            </summary>
+            <param name="response">The Output Port Message.</param>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.IUseCase`2">
+             <summary>
+             Interface for the handler of an use case.
+             </summary>
+             <typeparam name="TUseCaseInput">Type of the input message.</typeparam>
+             <typeparam name="TUseCaseOutput">Type of the output message.</typeparam>
+            
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.IUseCase`2.Execute(`0)">
+            <summary>
+            Executes the Use Case.
+            </summary>
+            <param name="input">Input Message.</param>
+            <returns>Task.</returns>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.IUseCaseInput">
+            <summary>
+            Input Message interface marker.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.IUseCaseOutput">
+            <summary>
+            Output Message interface marker.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.IListVehiclesUseCase">
+            <summary>
+            Gets a list of vehicles.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.IListVehiclesUseCase.Execute">
+            <summary>
+            Executes the Use Case.
+            </summary>
+            <returns>Task.</returns>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehicleOutput">
+            <summary>
+            DTO for output for a list of vehicles.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehicleOutput.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehicleOutput"/> class.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehicleOutput.#ctor(System.Collections.Generic.IList{GtMotive.Estimate.Microservice.Domain.Entities.Vehicle})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehicleOutput"/> class with a list of vehicles.
+            </summary>
+            <param name="vehicles">The list of vehicles.</param>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehicleOutput.VehiclesList">
+            <summary>
+            Gets the list of vehicles.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehicleOutput.AddVehicles(System.Collections.Generic.IEnumerable{GtMotive.Estimate.Microservice.Domain.Entities.Vehicle})">
+            <summary>
+            Adds multiple vehicles to the list.
+            </summary>
+            <param name="vehicles">The vehicles to add.</param>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehiclesUseCase">
+            <summary>
+            Gets a list of vehicles.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehiclesUseCase.#ctor(GtMotive.Estimate.Microservice.Domain.Interfaces.IVehicleRepository)">
+            <summary>
+            Gets a list of vehicles.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehiclesUseCase.Execute">
+            <summary>
+            Gets a list of vehicles.
+            </summary>
+            <returns>A list of vehicles.</returns>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehiclesUseCase.StandardHandle(GtMotive.Estimate.Microservice.ApplicationCore.UseCases.List.ListVehicleOutput)">
+            <summary>
+            Gets a list of vehicles.
+            </summary>
+            /// <param name="response">A list of vehicles.</param>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.IRentVehicleUserCase">
+            <summary>
+            Interface for handle rent vehicle user case.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleInput">
+            <summary>
+            DTO for input when renting Vehicles.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleInput.VIN">
+            <summary>
+            Gets or sets the VIN of the Vehicle.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleInput.RentedById">
+            <summary>
+            Gets or sets Id of the customer who has rented the vehicle.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleOutput">
+            <summary>
+            DTO for output when creating Vehicles.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleOutput.VIN">
+            <summary>
+            Gets or sets Vehicle´s VIN.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleOutput.RentedById">
+            <summary>
+            Gets or sets the ID of the user who rented the Vehicle.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleUseCase">
+            <summary>
+            Use case to rent a vehicle in the system.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleUseCase.#ctor(GtMotive.Estimate.Microservice.Domain.Interfaces.IVehicleRepository)">
+            <summary>
+            Use case to rent a vehicle in the system.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleUseCase.Execute(GtMotive.Estimate.Microservice.ApplicationCore.UseCases.Rent.RentVehicleInput)">
+            <summary>
+            Executes the use case.
+            </summary>
+            <param name="input">The input data required for renting a vehicle.</param>
+            <returns> Returns a dto with the information of the vehicle rented and by whom. </returns>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.IReturnVehicleUserCase">
+            <summary>
+            Interface for handle renturn vehicle user case.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.ReturnVehicleInput">
+            <summary>
+            DTO for input when returning a Vehicle.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.ReturnVehicleInput.VIN">
+            <summary>
+            Gets or sets the VIN of the Vehicle.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.ReturnVehicleOutput">
+            <summary>
+            DTO for output when returning a Vehicle.
+            </summary>
+        </member>
+        <member name="P:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.ReturnVehicleOutput.VIN">
+            <summary>
+            Gets or sets Vehicle´s VIN.
+            </summary>
+        </member>
+        <member name="T:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.ReturnVehicleUseCase">
+            <summary>
+            Use case for returning a vehicle.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.ReturnVehicleUseCase.#ctor(GtMotive.Estimate.Microservice.Domain.Interfaces.IVehicleRepository)">
+            <summary>
+            Use case for returning a vehicle.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.ReturnVehicleUseCase.Execute(GtMotive.Estimate.Microservice.ApplicationCore.UseCases.ReturnVehicle.ReturnVehicleInput)">
+            <summary>
+            Executes the use case.
+            </summary>
+            <param name="input">The input data required for returning a vehicle.</param>
+            <returns> Returns a dto with the information of the vehicle returned. </returns>
+        </member>
+    </members>
+</doc>

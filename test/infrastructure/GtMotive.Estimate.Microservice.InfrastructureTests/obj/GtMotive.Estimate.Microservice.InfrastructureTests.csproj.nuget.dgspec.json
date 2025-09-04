@@ -1,0 +1,503 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\test\\infrastructure\\GtMotive.Estimate.Microservice.InfrastructureTests\\GtMotive.Estimate.Microservice.InfrastructureTests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Api\\GtMotive.Estimate.Microservice.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Api\\GtMotive.Estimate.Microservice.Api.csproj",
+        "projectName": "GtMotive.Estimate.Microservice.Api",
+        "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Api\\GtMotive.Estimate.Microservice.Api.csproj",
+        "packagesPath": "C:\\Users\\apineda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\NuGet.Config",
+          "C:\\Users\\apineda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.ApplicationCore\\GtMotive.Estimate.Microservice.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.ApplicationCore\\GtMotive.Estimate.Microservice.ApplicationCore.csproj"
+              },
+              "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Infrastructure\\GtMotive.Estimate.Microservice.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Infrastructure\\GtMotive.Estimate.Microservice.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "target": "Package",
+              "version": "[10.7.0.110445, )"
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.2.0-beta.435, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.ApplicationCore\\GtMotive.Estimate.Microservice.ApplicationCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.ApplicationCore\\GtMotive.Estimate.Microservice.ApplicationCore.csproj",
+        "projectName": "GtMotive.Estimate.Microservice.ApplicationCore",
+        "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.ApplicationCore\\GtMotive.Estimate.Microservice.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\apineda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.ApplicationCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\NuGet.Config",
+          "C:\\Users\\apineda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Domain\\GtMotive.Estimate.Microservice.Domain.csproj": {
+                "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Domain\\GtMotive.Estimate.Microservice.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "target": "Package",
+              "version": "[10.7.0.110445, )"
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.2.0-beta.435, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Domain\\GtMotive.Estimate.Microservice.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Domain\\GtMotive.Estimate.Microservice.Domain.csproj",
+        "projectName": "GtMotive.Estimate.Microservice.Domain",
+        "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Domain\\GtMotive.Estimate.Microservice.Domain.csproj",
+        "packagesPath": "C:\\Users\\apineda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\NuGet.Config",
+          "C:\\Users\\apineda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "target": "Package",
+              "version": "[10.7.0.110445, )"
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.2.0-beta.435, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Infrastructure\\GtMotive.Estimate.Microservice.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Infrastructure\\GtMotive.Estimate.Microservice.Infrastructure.csproj",
+        "projectName": "GtMotive.Estimate.Microservice.Infrastructure",
+        "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Infrastructure\\GtMotive.Estimate.Microservice.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\apineda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\NuGet.Config",
+          "C:\\Users\\apineda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.ApplicationCore\\GtMotive.Estimate.Microservice.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.ApplicationCore\\GtMotive.Estimate.Microservice.ApplicationCore.csproj"
+              },
+              "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Domain\\GtMotive.Estimate.Microservice.Domain.csproj": {
+                "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Domain\\GtMotive.Estimate.Microservice.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.ApplicationInsights": {
+              "target": "Package",
+              "version": "[2.23.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.5.2, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "target": "Package",
+              "version": "[10.7.0.110445, )"
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.2.0-beta.435, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\test\\infrastructure\\GtMotive.Estimate.Microservice.InfrastructureTests\\GtMotive.Estimate.Microservice.InfrastructureTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\test\\infrastructure\\GtMotive.Estimate.Microservice.InfrastructureTests\\GtMotive.Estimate.Microservice.InfrastructureTests.csproj",
+        "projectName": "GtMotive.Estimate.Microservice.InfrastructureTests",
+        "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\test\\infrastructure\\GtMotive.Estimate.Microservice.InfrastructureTests\\GtMotive.Estimate.Microservice.InfrastructureTests.csproj",
+        "packagesPath": "C:\\Users\\apineda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\test\\infrastructure\\GtMotive.Estimate.Microservice.InfrastructureTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\NuGet.Config",
+          "C:\\Users\\apineda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Api\\GtMotive.Estimate.Microservice.Api.csproj": {
+                "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Api\\GtMotive.Estimate.Microservice.Api.csproj"
+              },
+              "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Infrastructure\\GtMotive.Estimate.Microservice.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\apineda\\source\\repos\\PruebaTecnicaNET\\hexagonal-architecture-doc-main\\src\\GtMotive.Estimate.Microservice.Infrastructure\\GtMotive.Estimate.Microservice.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Acheve.TestHost": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.13.0, )"
+            },
+            "SonarAnalyzer.CSharp": {
+              "target": "Package",
+              "version": "[10.7.0.110445, )"
+            },
+            "StyleCop.Analyzers": {
+              "target": "Package",
+              "version": "[1.2.0-beta.435, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GtMotive.Estimate.Microservice.UnitTests</name>
+    </assembly>
+    <members>
+        <member name="T:GtMotive.Estimate.Microservice.UnitTests.ApplicationCore.UseCases.Create.CreateVehicleUseCaseTest">
+            <summary>
+            Unit test class for create vehicle use case.
+            </summary>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.UnitTests.ApplicationCore.UseCases.Create.CreateVehicleUseCaseTest.ExecuteShouldCreateVehicleSuccessfully">
+            <summary>
+            Unit test method for validate create vehicle use case.
+            </summary>
+            <returns>A Task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:GtMotive.Estimate.Microservice.UnitTests.ApplicationCore.UseCases.Create.CreateVehicleUseCaseTest.ExecuteShouldNotCreateVehicleSuccessfully">
+            <summary>
+             Unit test method for validate create vehicle use case.
+            </summary>
+            <returns>A Task representing the asynchronous operation.</returns>
+        </member>
+    </members>
+</doc>
